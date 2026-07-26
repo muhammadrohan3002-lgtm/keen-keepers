@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Emma Wilson",
+    "picture": "https://i.pravatar.cc/300?img=5",
+    "email": "emma@gmail.com",
+    "days_since_contact": 62,
+    "status": "overdue",
+    "tags": ["Family"],
+    "bio": "Former college friend and mentor.",
+    "goal": 30,
+    "next_due_date": "2026-02-27"
+  },
+  {
+    "id": 2,
+    "name": "David Kim",
+    "picture": "https://i.pravatar.cc/300?img=15",
+    "email": "david@gmail.com",
+    "days_since_contact": 10,
+    "status": "on-track",
+    "tags": ["Work"],
+    "bio": "Office teammate and football buddy.",
+    "goal": 30,
+    "next_due_date": "2026-03-20"
+  },
+  {
+    "id": 3,
+    "name": "Lisa Nakamura",
+    "picture": "https://i.pravatar.cc/300?img=20",
+    "email": "lisa@gmail.com",
+    "days_since_contact": 42,
+    "status": "almost due",
+    "tags": ["College"],
+    "bio": "Met during university.",
+    "goal": 45,
+    "next_due_date": "2026-03-01"
+  },
+  {
+    "id": 4,
+    "name": "James Wright",
+    "picture": "https://i.pravatar.cc/300?img=12",
+    "email": "james@gmail.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["Gym"],
+    "bio": "Workout partner.",
+    "goal": 20,
+    "next_due_date": "2026-04-01"
+  },
+  {
+    "id": 5,
+    "name": "Sarah Chen",
+    "picture": "https://i.pravatar.cc/300?img=25",
+    "email": "sarah@gmail.com",
+    "days_since_contact": 55,
+    "status": "overdue",
+    "tags": ["School"],
+    "bio": "School best friend.",
+    "goal": 30,
+    "next_due_date": "2026-02-25"
+  },
+  {
+    "id": 6,
+    "name": "Marcus Johnson",
+    "picture": "https://i.pravatar.cc/300?img=35",
+    "email": "marcus@gmail.com",
+    "days_since_contact": 14,
+    "status": "on-track",
+    "tags": ["Travel"],
+    "bio": "Travel companion.",
+    "goal": 20,
+    "next_due_date": "2026-03-15"
+  },
+  {
+    "id": 7,
+    "name": "Olivia Martinez",
+    "picture": "https://i.pravatar.cc/300?img=47",
+    "email": "olivia@gmail.com",
+    "days_since_contact": 32,
+    "status": "almost due",
+    "tags": ["Neighbour"],
+    "bio": "Lives next door.",
+    "goal": 35,
+    "next_due_date": "2026-03-07"
+  },
+  {
+    "id": 8,
+    "name": "Tom Baker",
+    "picture": "https://i.pravatar.cc/300?img=60",
+    "email": "tom@gmail.com",
+    "days_since_contact": 8,
+    "status": "on-track",
+    "tags": ["Cricket"],
+    "bio": "Cricket teammate.",
+    "goal": 15,
+    "next_due_date": "2026-04-12"
+  }
+]

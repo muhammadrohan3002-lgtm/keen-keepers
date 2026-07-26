@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { Component, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
@@ -10,6 +10,7 @@ import Timeline from './pages/Timeline.jsx';
 
 import Stats from './pages/Stats.jsx';
 import FriendDetails from './pages/FriendDetails.jsx';
+import ErrorPage from './pages/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,11 @@ const router = createBrowserRouter([
         path:"friend/:id",
         Component:FriendDetails
       },
+      {  
+          path: "*",
+         Component:ErrorPage,
+      }
+      
       
     ]
   },

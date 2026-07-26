@@ -1,15 +1,33 @@
+import { useEffect, useState } from "react";
+
+import Banner from "../component/Banner";
+import FriendGrid from "../component/FriendGrid";
+import Loading from "../component/Loading";
+
 const Home = () => {
+  const [friends, setFriends] = useState([]);
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/friends.json")
+      .then((res) => res.json())
+      .then((data) => {
+        setFriends(data);
+
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-4">
+      <Banner />
 
-      <h1 className="text-6xl text-center mt-24 font-bold">
-        KeenKeeper
-      </h1>
-
-      <p className="text-center mt-5">
-        Friends to keep close in your life.
-      </p>
-
+      <FriendGrid friends={friends} />
     </div>
   );
 };
