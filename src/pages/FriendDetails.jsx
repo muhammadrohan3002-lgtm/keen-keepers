@@ -6,6 +6,7 @@ import GoalCard from "../component/GoalCard";
 import QuickCheckin from "../component/QuickCheckin";
 import Loading from "../component/Loading";
 
+
 import { FaClock, FaBoxArchive, FaTrash } from "react-icons/fa6";
 
 const FriendDetails = () => {
