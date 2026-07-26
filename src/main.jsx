@@ -5,7 +5,7 @@ import App from './App.jsx'
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Layout from './layout/Layout.jsx';
-import Home from './pages/home.jsx';
+import Home from './pages/Home.jsx';
 import Timeline from './pages/Timeline.jsx';
 
 import Stats from './pages/Stats.jsx';
