@@ -1,58 +1,94 @@
 import { NavLink } from "react-router";
-
-import { FiHome } from "react-icons/fi";
-import { FiClock } from "react-icons/fi";
-import { FiBarChart2 } from "react-icons/fi";
+import { FiHome, FiClock, FiBarChart2, FiMenu } from "react-icons/fi";
 
 const Navbar = () => {
+ const links = (
+  <>
+    <li>
+      <NavLink
+        to="/"
+        end
+        className={({ isActive }) =>
+          isActive
+            ? "bg-green-700 text-white rounded-lg"
+            : ""
+        }
+      >
+        <FiHome />
+        Home
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink
+        to="/timeline"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-green-700 text-white rounded-lg"
+            : ""
+        }
+      >
+        <FiClock />
+        Timeline
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink
+        to="/stats"
+        className={({ isActive }) =>
+          isActive
+            ? "bg-green-700 text-white rounded-lg"
+            : ""
+        }
+      >
+        <FiBarChart2 />
+        Stats
+      </NavLink>
+    </li>
+  </>
+);
+
   return (
-    <div className="border-b">
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-5 px-4">
+    <div className="navbar bg-base-100 shadow-sm">
 
-        <h1 className="text-2xl font-bold text-green-900">
-          KeenKeeper
-        </h1>
+      <div className="navbar-start">
 
-        <div className="flex gap-5">
+        <div className="dropdown">
 
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              isActive
-                ? "bg-green-900 text-white px-4 py-2 rounded flex items-center gap-2"
-                : "flex items-center gap-2"
-            }
+          <label tabIndex={0} className="btn btn-ghost lg:hidden">
+
+            <FiMenu size={24} />
+
+          </label>
+
+          <ul
+            tabIndex={0}
+            className="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <FiHome />
-            Home
-          </NavLink>
-
-          <NavLink
-            to="timeline"
-            className={({ isActive }) =>
-              isActive
-                ? "bg-green-900 text-white px-4 py-2 rounded flex items-center gap-2"
-                : "flex items-center gap-2"
-            }
-          >
-            <FiClock />
-            Timeline
-          </NavLink>
-
-          <NavLink
-            to="stats"
-            className={({ isActive }) =>
-              isActive
-                ? "bg-green-900 text-white px-4 py-2 rounded flex items-center gap-2"
-                : "flex items-center gap-2"
-            }
-          >
-            <FiBarChart2 />
-            Stats
-          </NavLink>
+            {links}
+          </ul>
 
         </div>
+
+        <a className="text-2xl font-bold text-green-700">
+
+          KeenKeeper
+
+        </a>
+
       </div>
+
+      <div className="navbar-end hidden lg:flex">
+
+        <ul className="menu menu-horizontal px-1">
+
+          {links}
+
+        </ul>
+
+      </div>
+
     </div>
   );
 };

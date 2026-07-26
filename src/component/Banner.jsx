@@ -1,40 +1,43 @@
-import { FaPlus } from "react-icons/fa";
 import SummaryCard from "./SummaryCard";
 
+const Banner = ({ friends = [] }) => {
 
-const Banner = () => {
+  const total = friends.length;
+
+  const onTrack = friends.filter(
+    f => f.status === "on-track"
+  ).length;
+
+  const overdue = friends.filter(
+    f => f.status === "overdue"
+  ).length;
+
+  const almost = friends.filter(
+    f => f.status === "almost due"
+  ).length;
+
   return (
-    <section className="text-center py-16">
-
-      <h1 className="text-5xl font-bold">
-        Friends to keep close in your life
+    <>
+      <h1 className="text-6xl font-bold text-center">
+        Friends to keep close in your life.
       </h1>
 
-      <p className="text-gray-500 mt-5">
-        Browse, nurture and manage relationships.
+      <p className="text-center mt-5">
+        Keep your friendships healthy.
       </p>
-
-      <button className="btn btn-success mt-8">
-
-        <FaPlus />
-
-        Add a Friend
-
-      </button>
 
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
 
-        <SummaryCard value="8" title="Total Friends" />
+        <SummaryCard title="Friends" value={total}/>
 
-        <SummaryCard value="5" title="On Track" />
+        <SummaryCard title="On Track" value={onTrack}/>
 
-        <SummaryCard value="2" title="Need Attention" />
+        <SummaryCard title="Almost Due" value={almost}/>
 
-        <SummaryCard value="18" title="Interactions" />
+        <SummaryCard title="Overdue" value={overdue}/>
 
       </div>
-
-    </section>
+    </>
   );
 };
 

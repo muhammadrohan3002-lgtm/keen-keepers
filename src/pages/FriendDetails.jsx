@@ -6,7 +6,6 @@ import GoalCard from "../component/GoalCard";
 import QuickCheckin from "../component/QuickCheckin";
 import Loading from "../component/Loading";
 
-
 import { FaClock, FaBoxArchive, FaTrash } from "react-icons/fa6";
 
 const FriendDetails = () => {
@@ -66,7 +65,7 @@ const FriendDetails = () => {
             Archive
           </button>
 
-          <button className="btn btn-error w-full mt-2">
+          <button className="btn w-full mt-2 text-red-500">
             <FaTrash />
             Delete
           </button>
