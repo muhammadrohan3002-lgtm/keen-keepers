@@ -1,10 +1,17 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export const TimelineContext = createContext();
 
 const TimelineProvider = ({ children }) => {
 
-  const [timeline, setTimeline] = useState([]);
+  const [timeline, setTimeline] = useState(() => {
+    const stored = localStorage.getItem("timeline");
+    return stored ? JSON.parse(stored) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("timeline", JSON.stringify(timeline));
+  }, [timeline]);
 
   const addTimeline = (type, friendName) => {
 
@@ -12,7 +19,7 @@ const TimelineProvider = ({ children }) => {
       id: Date.now(),
       type,
       title: `${type} with ${friendName}`,
-      date: new Date().toLocaleDateString()
+      date: new Date().toLocaleDateString(),
     };
 
     setTimeline(prev => [newEntry, ...prev]);
