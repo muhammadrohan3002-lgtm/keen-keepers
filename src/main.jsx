@@ -11,6 +11,8 @@ import Timeline from './pages/Timeline.jsx';
 import Stats from './pages/Stats.jsx';
 import FriendDetails from './pages/FriendDetails.jsx';
 import ErrorPage from './pages/ErrorPage.jsx';
+import TimelineProvider from './component/TimelineContext.jsx';
+import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -46,7 +48,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />,
+    <TimelineProvider>
+      <RouterProvider router={router} />
+      <ToastContainer position="top-right"/>
+    </TimelineProvider>
+    
     <App />
   </StrictMode>,
 )
